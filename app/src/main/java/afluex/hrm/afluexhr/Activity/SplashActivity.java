@@ -34,7 +34,7 @@ ActivityMainBinding binding;
                                 startActivity(new Intent(SplashActivity.this,DashboardActivity.class));
                                 finish();
                             }else{
-                                startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+                                startActivity(new Intent(SplashActivity.this, WelcomeActivity.class));
                                 finish();
                             }
 

@@ -58,7 +58,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/shape_rectangle_background"
+                    android:background="@drawable/shape_splash_background"
 
                     android:orientation="vertical">
 
@@ -77,20 +77,10 @@
                             android:layout_height="wrap_content"
                             android:text="Hello!"
                             android:fontFamily="@font/sfuitext_semibold"
-                            android:textColor="@color/black"
-                            android:textSize="20sp" />
-                        <TextView
-                            android:id="@+id/tv_number"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=""
-                            android:fontFamily="@font/sfuitext_medium"
-                            android:gravity="center"
-                            android:layout_marginTop="-6dp"
-                            android:letterSpacing="-0.1"
                             android:textColor="@color/white"
-                            android:textSize="13sp" />
+                            android:textSize="20sp" />
                     </LinearLayout>
+
                 </RelativeLayout>
 
 
@@ -120,7 +110,7 @@
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:src="@drawable/baseline_home_24"
-                            app:tint="@color/black" />
+                            app:tint="#003273" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -146,8 +136,7 @@
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            app:tint="@color/black"
-                            android:src="@drawable/ic_calender" />
+                            android:src="@drawable/attendence_icon" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -200,8 +189,8 @@
                         <ImageView
                             android:layout_width="@dimen/space_30dp"
                             android:layout_height="@dimen/space_30dp"
-                            app:tint="@color/black"
-                            android:src="@drawable/s_bookmark" />
+
+                            android:src="@drawable/salary_icon" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -227,8 +216,8 @@
                         <ImageView
                             android:layout_width="@dimen/space_30dp"
                             android:layout_height="@dimen/space_30dp"
-                            app:tint="@color/black"
-                            android:src="@drawable/ic_calender" />
+
+                            android:src="@drawable/leave" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -257,8 +246,8 @@
                             android:layout_width="@dimen/space_30dp"
                             android:layout_height="@dimen/space_30dp"
 
-                            android:src="@drawable/ic_calender"
-                            app:tint="@color/black"/>
+                            android:src="@drawable/message_icon"
+                            />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -312,7 +301,7 @@
                             android:layout_width="@dimen/space_30dp"
                             android:layout_height="@dimen/space_30dp"
 
-                            app:tint="@color/black"
+                            app:tint="#003273"
                             android:src="@drawable/ic_calender" />
 
                         <TextView
@@ -339,7 +328,7 @@
                             android:layout_width="@dimen/space_30dp"
                             android:layout_height="@dimen/space_30dp"
 
-                            app:tint="@color/black"
+                            app:tint="#003273"
                             android:src="@drawable/ic_power" />
 
                         <TextView

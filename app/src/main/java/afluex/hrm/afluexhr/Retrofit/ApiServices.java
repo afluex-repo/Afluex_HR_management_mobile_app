@@ -12,6 +12,7 @@ import afluex.hrm.afluexhr.Model.ResponseLeaveCount;
 import afluex.hrm.afluexhr.Model.ResponseLeaveReportForEmployeeBy;
 import afluex.hrm.afluexhr.Model.ResponseLogin;
 import afluex.hrm.afluexhr.Model.ResponseMessageList;
+import afluex.hrm.afluexhr.Model.ResponseProfile;
 import afluex.hrm.afluexhr.Model.ResponseSalaryPaymentReport;
 import afluex.hrm.afluexhr.Model.lstList;
 import okhttp3.MultipartBody;
@@ -57,6 +58,11 @@ public interface ApiServices {
 
 @POST("WebAPI/GetAttenndaceList")
     Call<ResponseAttendnace> GetAttenndaceList	(@Body JsonObject login);
+
+@POST("WebAPI/EmployeeProfile")
+    Call<ResponseProfile> EmployeeProfile	(@Body JsonObject login);
+@POST("WebAPI/UpdateEmployeeProfile")
+    Call<CommonResponse> UpdateEmployeeProfile	(@Body JsonObject login);
 
 
 }

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "728260527523",
+    "project_id": "hrms-6ebf7",
+    "storage_bucket": "hrms-6ebf7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728260527523:android:a0fc07241509728ad08616",
+        "android_client_info": {
+          "package_name": "afluex.hrm.afluexhr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCF3oDPTc8w4olEHzORpSVrTQ87EXOM20"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -7,6 +7,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
 
+
     android:layout_height="wrap_content"
 
     >
@@ -35,6 +36,7 @@
         android:padding="8dp"
         android:layout_marginStart="0dp"
         android:background="@drawable/shape_background_toolbar_curve"
+
         app:popupTheme="@style/AppTheme.PopupOverlay">
 
 
@@ -44,6 +46,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:visibility="visible"
+            android:paddingBottom="8dp"
             android:orientation="vertical">
         <RelativeLayout
             android:id="@+id/rl_menu"
@@ -129,15 +132,17 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/rl_menu"
                 android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:visibility="visible"
                 android:layout_centerVertical="true">
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_weight="3"
+
+
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+
 
                     android:orientation="vertical">
 
@@ -150,8 +155,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Hello!"
-                        android:layout_gravity="center"
-                        android:gravity="center"
+
                         android:layout_marginTop="8dp"
                         android:textSize="18sp"
                         android:textColor="@color/white"/>
@@ -160,8 +164,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Date"
-                        android:layout_gravity="center"
-                        android:gravity="center"
+
                         android:layout_marginTop="8dp"
                         android:textSize="18sp"
                         android:textColor="@color/white"/>

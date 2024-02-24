@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+    android:layout_width="match_parent">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ic_add"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end|bottom"
+        android:contentDescription="+"
+        app:backgroundTint="@null"
+        app:fabSize="auto"
+
+        android:background="@drawable/ic_edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="64dp"
+
+        app:contentPadding="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#ffffff"
+        >
+        <ImageView
+            android:id="@+id/img_add"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_edit"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ic_update"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end|bottom"
+        android:contentDescription="+"
+        app:backgroundTint="@null"
+        android:visibility="gone"
+        app:fabSize="auto"
+
+        android:background="@drawable/ic_edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="64dp"
+
+        app:contentPadding="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#ffffff"
+        >
+        <ImageView
+            android:id="@+id/img_update"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/success1"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/root_leyaut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="8dp"
+            app:strokeColor="@color/grey_200"
+            app:cardElevation="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+
+
+            app:cardBackgroundColor="@color/white"
+            android:outlineAmbientShadowColor="@color/black"
+            app:strokeWidth="1dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="8dp">
+
+                <TextView
+                    android:id="@+id/txt_login_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\@appsnippuser"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+
+                <TextView
+                    style="@style/headerText"
+                    android:text="Personal Info"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_name1"
+                        android:text="Name"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                       android:textSize="14sp"/>
+
+                    <EditText
+                        android:id="@+id/et_name"
+                        android:layout_width="0dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="Sugandh" />
+
+                </LinearLayout>
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Father"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:padding="4dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textStyle="bold"
+                         />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                       android:textSize="14sp"/>
+
+                    <EditText
+                        android:id="@+id/et_father_name"
+                        android:text="Vijay"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1.5"
+                        android:text="Gender" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textSize="14sp"/>
+
+                    <EditText
+                        android:id="@+id/et_gender"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:inputType="textEmailAddress"
+                        android:text="Male"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Mobile"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                       android:textSize="14sp"/>
+
+                    <EditText
+                        android:id="@+id/txt_mobile"
+
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:text="+91-8129999999"
+                        android:inputType="number"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1.5"
+                        android:text="Email" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                       android:textSize="14sp"/>
+
+                    <EditText
+                        android:id="@+id/et_email"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:inputType="textEmailAddress"
+                        android:text="developer@afluex.com"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="D.O.B"
+                        android:textStyle="bold"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:padding="4dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                       android:textSize="14sp"/>
+
+                    <EditText
+                        android:id="@+id/et_dob"
+
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:text="12-05-1990"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="Address"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                       android:textSize="14sp"/>
+
+                    <EditText
+                        android:id="@+id/et_address"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+
+                        android:text="Avenue 2nd Street NW SY."
+
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="City"
+                        android:layout_weight="1.5"
+                        android:padding="4dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textStyle="bold"
+                        android:layout_width="0dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                       android:textSize="14sp"/>
+
+                    <EditText
+                        android:id="@+id/et_city"
+
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:text="Lucknow"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="State"
+                        android:textStyle="bold"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:padding="4dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                       android:textSize="14sp"/>
+
+                    <EditText
+                        android:id="@+id/et_state"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+
+                        android:text="Uttar Pradesh"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:text="Pin"
+                        android:textStyle="bold"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:padding="4dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                       android:textSize="14sp"/>
+
+                    <EditText
+                        android:id="@+id/et_pin_code"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+
+                        android:text="226017"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+
+
+                <TextView
+                    style="@style/headerText"
+                    android:text="Financial Info"
+                    android:layout_marginBottom="8dp"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/txt_pan"
+                        android:text="Pan No."
+                        android:textStyle="bold"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:padding="4dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                       android:textSize="14sp"/>
+
+                    <EditText
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+
+                        android:id="@+id/et_pan"
+                        android:text="Sugandh"
+
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/txt_acc"
+                        android:text="Account No."
+                        android:textStyle="bold"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:padding="4dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                       android:textSize="14sp"/>
+
+                    <EditText
+
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:id="@+id/et_acc"
+                        android:text="Sugandh"
+
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/txt_bank"
+                        android:text="Bank Name"
+                        android:layout_width="0dp"
+                        android:textStyle="bold"
+                        android:layout_weight="1.5"
+                        android:padding="4dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                       android:textSize="14sp"/>
+
+                    <EditText
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+
+                        android:id="@+id/et_bank"
+                        android:text="Sugandh"
+
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/txt_Branch"
+                        android:text="Branch Name"
+                        android:textStyle="bold"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:padding="4dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                       android:textSize="14sp"/>
+
+                    <EditText
+
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:id="@+id/et_Branch"
+                        android:text="Sugandh"
+
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/txt_ifsc"
+                        android:text="IFSC"
+                        android:textStyle="bold"
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:padding="4dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                       android:textSize="14sp"/>
+
+                    <EditText
+
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:id="@+id/et_ifsc"
+                        android:text="Sugandh"
+
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

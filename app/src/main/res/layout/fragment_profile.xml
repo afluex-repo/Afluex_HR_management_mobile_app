@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.ProfileFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/profileBackground"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context="com.appsnipp.profiledesigns.ProfileActivity">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/shape_rectangle_background"
+                android:padding="8dp">
+
+                <RelativeLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+
+                    android:background="@drawable/shape_rectangle_thick">
+
+                    <ImageView
+                        android:id="@+id/img_profile"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/black"
+                        android:backgroundTint="@color/black"
+                        android:src="@drawable/profile_round" />
+
+                        <ImageView
+                            android:id="@+id/img_add"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/img_profile"
+                            android:layout_toEndOf="@id/img_profile"
+                            android:layout_marginTop="-40dp"
+                            android:layout_marginStart="-10dp"
+                            android:src="@drawable/ic_edit"/>
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <include
+            android:id="@+id/ll_content"
+
+
+            layout="@layout/content_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

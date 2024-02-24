@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="150dp"
-        android:src="@drawable/smile"
-        android:layout_gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_800"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:src="@drawable/success1"
+
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+
         android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
@@ -22,9 +32,9 @@
             android:id="@+id/txt_message"
             android:layout_gravity="center"
             android:gravity="center"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="18sp"
-            android:background="@color/green_100"
+            android:background="@color/green_800"
             android:padding="8dp"
             android:text="Your Punch in is Successful"/>
 
@@ -34,119 +44,205 @@
             android:orientation="vertical"
             android:layout_marginTop="8dp"
             android:padding="8dp">
-            <LinearLayout
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/grey_200"
+                app:cardElevation="32dp"
+                app:cardCornerRadius="8dp"
+                app:contentPadding="8dp"
+                android:outlineSpotShadowColor="#f1f1f1"
+                android:outlineAmbientShadowColor="#f1f1f1">
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Date"
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:textStyle="normal"
-                    android:textSize="16sp"/>
-                <TextView
-                    android:id="@+id/txt_date"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Date"
-                    android:layout_weight="3"
-                    android:textColor="@color/black"
-                    android:textStyle="normal"
-                    android:textSize="16sp"/>
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Date"
+                            android:layout_weight="1.2"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="16sp"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text=":"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            android:textSize="16sp"/>
+                        <TextView
+                            android:id="@+id/txt_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Date"
+                            android:layout_weight="2"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            android:textSize="16sp"/>
 
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Time"
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:textStyle="normal"
-                    android:textSize="16sp"/>
-                <TextView
-                    android:id="@+id/txt_time"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Date"
-                    android:layout_weight="3"
-                    android:textColor="@color/black"
-                    android:textStyle="normal"
-                    android:textSize="16sp"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/black"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Time"
+                            android:layout_weight="1.2"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="16sp"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text=":"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            android:textSize="16sp"/>
+                        <TextView
+                            android:id="@+id/txt_time"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Date"
+                            android:layout_weight="2"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            android:textSize="16sp"/>
 
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Latitude:"
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:textStyle="normal"
-                    android:textSize="16sp"/>
-                <TextView
-                    android:id="@+id/txt_latitude"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Date"
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:textStyle="normal"
-                    android:textSize="16sp"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Longitude"
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:textStyle="normal"
-                    android:textSize="16sp"/>
-                <TextView
-                    android:id="@+id/txt_longitude"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:textStyle="normal"
-                    android:textSize="16sp"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/black"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Latitude:"
+                            android:layout_weight="1.2"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="16sp"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text=":"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            android:textSize="16sp"/>
+                        <TextView
+                            android:id="@+id/txt_latitude"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Date"
+                            android:layout_weight="2"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/black"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Longitude"
+                            android:layout_weight="1.2"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="16sp"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text=":"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            android:textSize="16sp"/>
+                        <TextView
+                            android:id="@+id/txt_longitude"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:layout_weight="2"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            android:textSize="16sp"/>
 
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/ll_address"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Address"
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:textStyle="normal"
-                    android:textSize="16sp"/>
-                <TextView
-                    android:id="@+id/txt_address"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Address"
-                    android:layout_weight="3"
-                    android:textColor="@color/black"
-                    android:textStyle="normal"
-                    android:textSize="16sp"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/black"/>
+                    <LinearLayout
+                        android:id="@+id/ll_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Address"
+                            android:layout_weight="1.2"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="16sp"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text=":"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            android:textSize="16sp"/>
+                        <TextView
+                            android:id="@+id/txt_address"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Address"
+                            android:layout_weight="2"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            android:textSize="16sp"/>
 
-            </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/black"/>
+                </LinearLayout>
+               
+            </com.google.android.material.card.MaterialCardView>
+           
             <Button
                 android:id="@+id/btn_start"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Start Your Day"
                 android:textAllCaps="true"
-                android:background="@color/button"
+                android:backgroundTint="@color/green_800"
                 android:layout_marginTop="8dp"/>
         </LinearLayout>
 

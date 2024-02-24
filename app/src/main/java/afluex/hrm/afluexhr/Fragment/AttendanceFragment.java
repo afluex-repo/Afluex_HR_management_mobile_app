@@ -78,6 +78,12 @@ public class AttendanceFragment extends Fragment {
         binding=FragmentAttendanceBinding.inflate(inflater,container,false);
         sharedPreferences= getActivity().getSharedPreferences("LoginDetails", MODE_PRIVATE);
         editor=sharedPreferences.edit();
+
+        progressDialog=new ProgressDialog(getActivity());
+
+        progressDialog.setCanceledOnTouchOutside(false);
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Logging You Out");
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(getActivity());
         lastActivity=sharedPreferences.getString("lastActivity","");
         lastActivityDate=sharedPreferences.getString("lastActivityDate","");
@@ -101,6 +107,7 @@ public class AttendanceFragment extends Fragment {
                         .setPositiveButton("Punch out", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
+                                progressDialog.show();
                                 detectLocation();
                             }
                         })
@@ -139,6 +146,7 @@ public class AttendanceFragment extends Fragment {
         locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
         if (ActivityCompat.checkSelfPermission(getActivity(), android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(),
                 android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            progressDialog.dismiss();
             requestLocationPermission();
             return;
         } else if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
@@ -168,6 +176,7 @@ public class AttendanceFragment extends Fragment {
                                         Location.distanceBetween(Utils.officeLatitude,Utils.officeLongitude,latitude,longitude,results);
                                         float distance=results[0];
                                         if(distance>1000){
+                                            progressDialog.dismiss();
                                             Toast.makeText(getActivity(), "You are "+distance+" m away from Office Location. Can't Punch Out.", Toast.LENGTH_SHORT).show();
                                         }else{
                                             savePunchOutAttendance();
@@ -184,15 +193,18 @@ public class AttendanceFragment extends Fragment {
 
 
                                 } catch (IOException e) {
+                                    progressDialog.dismiss();
                                     e.printStackTrace();
 
                                 }
 
                             } else {
+                                progressDialog.dismiss();
 
                                 Toast.makeText(getActivity() ,"Unable to detect Your Location", Toast.LENGTH_SHORT).show();
                             }
                         }catch (Exception e){
+                            progressDialog.dismiss();
 
 
                         }
@@ -234,6 +246,7 @@ public class AttendanceFragment extends Fragment {
                     if(response.isSuccessful()){
 
                         if(response.body().getMessage().equals("   PunchOut Successfully !")){
+                            progressDialog.dismiss();
                             final android.app.AlertDialog.Builder alert = new android.app.AlertDialog.Builder(getActivity());
                             View mView = LayoutInflater.from(getActivity()).inflate(R.layout.layout_punch_successful, null);
                             alert.setView(mView);
@@ -273,6 +286,7 @@ public class AttendanceFragment extends Fragment {
 
                             } catch (IOException e) {
                                 e.printStackTrace();
+
                                 txt_address.setText("-");
 
                             }
@@ -296,6 +310,7 @@ public class AttendanceFragment extends Fragment {
                             });
 
                         }else{
+                            progressDialog.dismiss();
                             Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
                         }
 
@@ -307,6 +322,7 @@ public class AttendanceFragment extends Fragment {
 
                 @Override
                 public void onFailure(Call<CommponPuchInPuchOutResponse> call, Throwable t) {
+                    progressDialog.dismiss();
 
                 }
             });
